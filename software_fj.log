@@ -1,0 +1,31 @@
+2026-11-19 12:40:59 | INFO    | ======================================================================
+2026-11-19 12:40:59 | INFO    | Inicio de la simulación Software FJ
+2026-11-19 12:40:59 | INFO    | Cliente registrado: CLI-001: Cliente Ana María Rojas (doc. ****871, ana.rojas@correo.com)
+2026-11-19 12:40:59 | INFO    | Cliente registrado: CLI-002: Cliente Carlos Pérez (doc. ****456, carlos.perez@empresa.co)
+2026-11-19 12:40:59 | ERROR   | Operación 03 'Registrar cliente con correo inválido' falló: [FJ-100] Correo 'luis.gomez@@correo' con formato inválido.
+2026-11-19 12:40:59 | ERROR   | Operación 04 'Registrar cliente sin teléfono (parámetro faltante)' falló: [FJ-001] Falta el parámetro obligatorio 'telefono'.
+2026-11-19 12:40:59 | ERROR   | Operación 05 'Registrar cliente con documento repetido' falló: [FJ-100] Ya existe un cliente con documento 1052334871.
+2026-11-19 12:40:59 | INFO    | Servicio creado: SAL-001: Sala 'Sala de Juntas' para 12 personas - $80,000/hora
+2026-11-19 12:40:59 | INFO    | Servicio creado: EQP-001: Alquiler de 3 x 'Portátil i7' - $45,000/día + seguro 5%
+2026-11-19 12:40:59 | INFO    | Servicio creado: ASE-001: Asesoría experta en 'Ciberseguridad' - $120,000/hora
+2026-11-19 12:40:59 | ERROR   | Operación 09 'Crear servicio con tarifa negativa' falló: [FJ-200] Tarifa base inválida para 'Auditorio': -5000.
+2026-11-19 12:40:59 | ERROR   | Operación 10 'Crear servicio de tipo inexistente' falló: [FJ-200] Tipo de servicio 'transporte' no existe.
+2026-11-19 12:40:59 | ERROR   | Operación 11 'Crear servicio con un dato que no corresponde (encadenamiento TypeError)' falló: [FJ-200] Datos no válidos para 'equipo': AlquilerEquipo.__init__() got an unexpected keyword argument 'color' | causa original: AlquilerEquipo.__init__() got an unexpected keyword argument 'color'
+2026-11-19 12:40:59 | INFO    | Descuento de 10% aplicado a ASE-001.
+2026-11-19 12:40:59 | ERROR   | Operación 13 'Aplicar descuento de 80% (excesivo)' falló: [FJ-300] Descuento 80% fuera de rango (máximo 50%).
+2026-11-19 12:40:59 | INFO    | Reserva RES-001 CONFIRMADA por $328,440.00.
+2026-11-19 12:40:59 | INFO    | Procesamiento de RES-001 terminado. Exitoso=True, estado=CONFIRMADA.
+2026-11-19 12:40:59 | INFO    | Reserva RES-002 CONFIRMADA por $385,560.00.
+2026-11-19 12:40:59 | INFO    | Procesamiento de RES-002 terminado. Exitoso=True, estado=CONFIRMADA.
+2026-11-19 12:40:59 | INFO    | Procesamiento de RES-003 terminado. Exitoso=False, estado=CANCELADA.
+2026-11-19 12:40:59 | ERROR   | Operación 17 'Reserva fallida: duración fuera de rango (40 días de portátiles)' falló: [FJ-400] No se pudo confirmar RES-003: [FJ-200] Portátil i7: la duración debe estar entre 1 y 30 días. | causa original: [FJ-200] Portátil i7: la duración debe estar entre 1 y 30 días.
+2026-11-19 12:40:59 | ERROR   | Operación 18 'Reserva fallida: cliente inexistente' falló: [FJ-400] No hay ningún cliente con documento 99999999.
+2026-11-19 12:40:59 | WARNING | Servicio EQP-001 (Portátil i7) deshabilitado.
+2026-11-19 12:40:59 | INFO    | Procesamiento de RES-004 terminado. Exitoso=False, estado=CANCELADA.
+2026-11-19 12:40:59 | ERROR   | Operación 19 'Reserva fallida: servicio no disponible (portátiles deshabilitados)' falló: [FJ-400] No se pudo confirmar RES-004: [FJ-201] El servicio 'Portátil i7' no está disponible. | causa original: [FJ-201] El servicio 'Portátil i7' no está disponible.
+2026-11-19 12:40:59 | INFO    | Procesamiento de RES-005 terminado. Exitoso=False, estado=CANCELADA.
+2026-11-19 12:40:59 | ERROR   | Operación 20 'Reserva fallida: duración no numérica ('tres')' falló: [FJ-400] No se pudo confirmar RES-005: [FJ-200] La duración debe ser un número entero de horas, no 'tres'. | causa original: [FJ-200] La duración debe ser un número entero de horas, no 'tres'.
+2026-11-19 12:40:59 | INFO    | Reserva RES-001 CANCELADA.
+2026-11-19 12:40:59 | ERROR   | Operación 22 'Cancelar otra vez RES-001 (operación no permitida)' falló: [FJ-500] La reserva RES-001 ya estaba cancelada.
+2026-11-19 12:40:59 | ERROR   | Operación 23 'Confirmar una reserva ya cancelada (operación no permitida)' falló: [FJ-500] La reserva RES-001 está CANCELADA y no se puede confirmar.
+2026-11-19 12:40:59 | INFO    | Fin de la simulación. Clientes: 2 | Servicios: 3 | Reservas: 5 (1 confirmadas) | Ingresos confirmados: $385,560.00
